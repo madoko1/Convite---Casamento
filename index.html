@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Convite - Eduardo & Nayara</title>
+  <style>
+    :root{
+      --accent:#a52a2a;
+      --card-bg: rgba(255,255,255,0.96);
+      --max-width:720px;
+    }
+    html,body{height:100%;margin:0;font-family:Georgia, "Times New Roman", serif;background:#f6efe9;}
+    /* Fundo capulana - substitua a URL pela sua imagem */
+    body::before{
+      content:"";
+      position:fixed;inset:0;
+      background-image: url('https://i.imgur.com/your-capulana.jpg');
+      background-size: 300px 300px;
+      background-repeat: repeat;
+      opacity:0.12;
+      z-index:0;
+      pointer-events:none;
+    }
+
+    .wrap{position:relative;z-index:1;min-height:100%;display:flex;align-items:center;justify-content:center;padding:40px;}
+    .card{
+      width:100%;max-width:var(--max-width);background:var(--card-bg);border-radius:14px;
+      box-shadow:0 10px 30px rgba(0,0,0,0.12);padding:36px;text-align:center;
+    }
+    h1{margin:0;font-size:2.2rem;color:var(--accent);letter-spacing:0.6px;}
+    p.lead{margin:12px 0 18px;color:#444;font-size:1.05rem;}
+    .meta{color:#666;margin-bottom:18px;}
+    .actions{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:18px;}
+    .btn{
+      display:inline-block;padding:10px 18px;border-radius:8px;text-decoration:none;color:#fff;background:var(--accent);
+      box-shadow:0 6px 14px rgba(165,42,42,0.18);
+    }
+    .btn.ghost{background:transparent;color:var(--accent);border:2px solid var(--accent);}
+    .info{margin-top:18px;color:#333;font-weight:600;}
+    .small{font-weight:400;color:#666;font-size:0.95rem;margin-top:8px;}
+
+    /* QR */
+    .qr img{width:140px;height:140px;border-radius:8px;border:6px solid #fff;box-shadow:0 6px 18px rgba(0,0,0,0.08);}
+
+    /* Pétalas */
+    .petala{
+      position:fixed;top:-50px;pointer-events:none;z-index:0;
+      width:22px;height:22px;border-radius:50%;opacity:0.95;
+      transform-origin:center;
+      will-change:transform,opacity,top,left;
+      mix-blend-mode:normal;
+    }
+    @keyframes cair {
+      0% { transform: translateY(-10vh) rotate(0deg); opacity:1; }
+      100% { transform: translateY(110vh) rotate(720deg); opacity:0; }
+    }
+
+    /* Responsivo */
+    @media (max-width:480px){
+      h1{font-size:1.6rem;}
+      .card{padding:22px;}
+      .qr img{width:120px;height:120px;}
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="card" role="main" aria-labelledby="title">
+      <h1 id="title">Eduardo & Nayara</h1>
+      <p class="lead">Com alegria convidamos você para celebrar o nosso casamento</p>
+      <div class="meta"><strong>14 de Dezembro de 2025</strong> — Maputo, Moçambique</div>
+
+      <div class="actions">
+        <!-- Botão WhatsApp -->
+        <a class="btn" href="https://wa.me/258845875972" target="_blank" rel="noopener noreferrer" aria-label="Enviar mensagem no WhatsApp">
+          Confirmar via WhatsApp
+        </a>
+
+        <!-- Link para o formulário de RSVP (substitua pelo seu link do Google Forms) -->
+        <a class="btn ghost" href="https://forms.gle/SEU-LINK-AQUI" target="_blank" rel="noopener noreferrer" aria-label="Abrir formulário RSVP">
+          Preencher RSVP
+        </a>
+      </div>
+
+      <div style="margin-top:20px;display:flex;gap:20px;align-items:center;justify-content:center;flex-wrap:wrap;">
+        <div class="qr" aria-hidden="false">
+          <!-- QR gerado dinamicamente a partir do link do formulário -->
+          <a href="https://forms.gle/SEU-LINK-AQUI" target="_blank" rel="noopener noreferrer">
+            <img src="https://api.qrserver.com/v1/create-qr-code/?data=https://forms.gle/SEU-LINK-AQUI&size=300x300" alt="QR Code para RSVP">
+          </a>
+        </div>
+
+        <div style="min-width:200px;text-align:left;">
+          <div class="info">Contribuições simbólicas</div>
+          <div class="small">M-Pesa: <strong>845875972</strong></div>
+          <div class="small">e-Mola: <strong>862057841</strong></div>
+          <div class="small" style="margin-top:8px;">WhatsApp: <strong>+258 845 875 972</strong></div>
+        </div>
+      </div>
+
+      <p class="small" style="margin-top:22px;">Toques de capulana e tradição. Aguardamos você para celebrar com música, dança e alegria.</p>
+    </div>
+  </div>
+
+  <script>
+    /* ====== Pétalas vermelhas e brancas ======
+       Gera pétalas com variações de tamanho, velocidade e posição
