@@ -1,108 +1,179 @@
 <!DOCTYPE html>
 <html lang="pt">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Convite - Eduardo & Nayara</title>
-  <style>
-    :root{
-      --accent:#a52a2a;
-      --card-bg: rgba(255,255,255,0.96);
-      --max-width:720px;
-    }
-    html,body{height:100%;margin:0;font-family:Georgia, "Times New Roman", serif;background:#f6efe9;}
-    /* Fundo capulana - substitua a URL pela sua imagem */
-    body::before{
-      content:"";
-      position:fixed;inset:0;
-      background-image: url('https://i.imgur.com/your-capulana.jpg');
-      background-size: 300px 300px;
-      background-repeat: repeat;
-      opacity:0.12;
-      z-index:0;
-      pointer-events:none;
-    }
-
-    .wrap{position:relative;z-index:1;min-height:100%;display:flex;align-items:center;justify-content:center;padding:40px;}
-    .card{
-      width:100%;max-width:var(--max-width);background:var(--card-bg);border-radius:14px;
-      box-shadow:0 10px 30px rgba(0,0,0,0.12);padding:36px;text-align:center;
-    }
-    h1{margin:0;font-size:2.2rem;color:var(--accent);letter-spacing:0.6px;}
-    p.lead{margin:12px 0 18px;color:#444;font-size:1.05rem;}
-    .meta{color:#666;margin-bottom:18px;}
-    .actions{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:18px;}
-    .btn{
-      display:inline-block;padding:10px 18px;border-radius:8px;text-decoration:none;color:#fff;background:var(--accent);
-      box-shadow:0 6px 14px rgba(165,42,42,0.18);
-    }
-    .btn.ghost{background:transparent;color:var(--accent);border:2px solid var(--accent);}
-    .info{margin-top:18px;color:#333;font-weight:600;}
-    .small{font-weight:400;color:#666;font-size:0.95rem;margin-top:8px;}
-
-    /* QR */
-    .qr img{width:140px;height:140px;border-radius:8px;border:6px solid #fff;box-shadow:0 6px 18px rgba(0,0,0,0.08);}
-
-    /* Pétalas */
-    .petala{
-      position:fixed;top:-50px;pointer-events:none;z-index:0;
-      width:22px;height:22px;border-radius:50%;opacity:0.95;
-      transform-origin:center;
-      will-change:transform,opacity,top,left;
-      mix-blend-mode:normal;
-    }
-    @keyframes cair {
-      0% { transform: translateY(-10vh) rotate(0deg); opacity:1; }
-      100% { transform: translateY(110vh) rotate(720deg); opacity:0; }
-    }
-
-    /* Responsivo */
-    @media (max-width:480px){
-      h1{font-size:1.6rem;}
-      .card{padding:22px;}
-      .qr img{width:120px;height:120px;}
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eduardo & Sofia - Entre Jacarandás e Estrelas</title>
+    <meta name="description" content="Convite de casamento - Eduardo & Sofia. 14 de Dezembro de 2025, Jardim dos Jacarandás, Matola.">
+    <meta property="og:title" content="Eduardo & Sofia - Nosso Casamento">
+    <meta property="og:description" content="Venha celebrar conosco entre jacarandás e estrelas!">
+    <meta property="og:image" content="URL_DA_IMAGEM_DO_CASAL">
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* ... TODO: MANTENHA O CSS DO SEU EXEMPLO ANTERIOR AQUI ... */
+    </style>
 </head>
 <body>
-  <div class="wrap">
-    <div class="card" role="main" aria-labelledby="title">
-      <h1 id="title">Eduardo & Nayara</h1>
-      <p class="lead">Com alegria convidamos você para celebrar o nosso casamento</p>
-      <div class="meta"><strong>14 de Dezembro de 2025</strong> — Maputo, Moçambique</div>
+    <!-- Tela Inicial (Splash) -->
+    <section id="splash">
+        <div class="leaves-container" id="leaves-container"></div>
+        <div class="splash-content">
+            <h1 class="couple-names">Eduardo & Sofia</h1>
+            <p class="subtitle">Unidos pelo destino, celebrando com amor</p>
+            <button class="btn" id="enter-btn">Entrar no convite</button>
+        </div>
+    </section>
 
-      <div class="actions">
-        <!-- Botão WhatsApp -->
-        <a class="btn" href="https://wa.me/258845875972" target="_blank" rel="noopener noreferrer" aria-label="Enviar mensagem no WhatsApp">
-          Confirmar via WhatsApp
-        </a>
+    <!-- Página 1 – O Convite -->
+    <section id="page1" class="page">
+        <h2 class="page-title">O Convite</h2>
+        <div class="page-content">
+            <p>Com imensa alegria, convidamos você para celebrar o nosso casamento!</p>
+        </div>
+        
+        <div class="info-grid">
+            <div class="info-item">
+                <i class="fas fa-user-friends"></i>
+                <h3>👰🏽‍♀️ Sofia & 🤵🏽 Eduardo</h3>
+            </div>
+            <div class="info-item">
+                <i class="far fa-calendar-alt"></i>
+                <h3>Data</h3>
+                <p>14 de Dezembro de 2025</p>
+            </div>
+            <div class="info-item">
+                <i class="far fa-clock"></i>
+                <h3>Hora</h3>
+                <p>16h00</p>
+            </div>
+            <div class="info-item">
+                <i class="fas fa-map-marker-alt"></i>
+                <h3>Local</h3>
+                <p>Jardim dos Jacarandás, Matola</p>
+            </div>
+        </div>
+        
+        <div class="page-content">
+            <p>Vista-se de amor, traga seu melhor sorriso e venha celebrar conosco!</p>
+        </div>
+        
+        <div class="btn-group">
+            <button class="btn btn-secondary" id="map-btn" aria-label="Ver local no Google Maps">Ver Local no Mapa</button>
+            <button class="btn btn-secondary" id="calendar-btn" aria-label="Adicionar ao calendário">Adicionar ao Calendário</button>
+            <button class="btn btn-secondary" id="confirm-btn" aria-label="Confirmar presença">Confirmar Presença</button>
+        </div>
+    </section>
 
-        <!-- Link para o formulário de RSVP (substitua pelo seu link do Google Forms) -->
-        <a class="btn ghost" href="https://forms.gle/SEU-LINK-AQUI" target="_blank" rel="noopener noreferrer" aria-label="Abrir formulário RSVP">
-          Preencher RSVP
-        </a>
-      </div>
+    <!-- Página 2 – Nossa História -->
+    <section id="page2" class="page">
+        <h2 class="page-title">Nossa História</h2>
+        <div class="timeline">
+            <!-- ... MANTENHA SUA TIMELINE ... -->
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <i class="fas fa-seedling"></i>
+                    <h3>2018 – O Encontro</h3>
+                    <p>Nos conhecemos entre livros e cafés...</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <i class="fas fa-envelope"></i>
+                    <h3>2020 – O Pedido</h3>
+                    <p>Sob o pôr do sol em Bilene, dissemos sim...</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <i class="fas fa-ring"></i>
+                    <h3>2025 – O Casamento</h3>
+                    <p>Agora é oficial. Vamos celebrar juntos!</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-      <div style="margin-top:20px;display:flex;gap:20px;align-items:center;justify-content:center;flex-wrap:wrap;">
-        <div class="qr" aria-hidden="false">
-          <!-- QR gerado dinamicamente a partir do link do formulário -->
-          <a href="https://forms.gle/SEU-LINK-AQUI" target="_blank" rel="noopener noreferrer">
-            <img src="https://api.qrserver.com/v1/create-qr-code/?data=https://forms.gle/SEU-LINK-AQUI&size=300x300" alt="QR Code para RSVP">
-          </a>
-        </div>
+    <!-- Página 3 – Presentes e Surpresas -->
+    <section id="page3" class="page">
+        <h2 class="page-title">Presentes e Surpresas</h2>
+        <div class="page-content">
+            <p>Sua presença é o nosso maior presente!</p>
+            <p>Mas se quiser nos mimar, veja nossa lista de desejos.</p>
+        </div>
+        
+        <div class="btn-group">
+            <button class="btn btn-secondary" id="gift-list-btn" aria-label="Abrir lista de presentes">Lista de Presentes</button>
+            <button class="btn btn-secondary" id="contribute-btn" aria-label="Contribuir com nosso lar">Contribuir com o nosso lar</button>
+        </div>
+    </section>
 
-        <div style="min-width:200px;text-align:left;">
-          <div class="info">Contribuições simbólicas</div>
-          <div class="small">M-Pesa: <strong>845875972</strong></div>
-          <div class="small">e-Mola: <strong>862057841</strong></div>
-          <div class="small" style="margin-top:8px;">WhatsApp: <strong>+258 845 875 972</strong></div>
-        </div>
-      </div>
+    <!-- Página 4 – Álbum de Memórias -->
+    <section id="page4" class="page">
+        <h2 class="page-title">Álbum de Memórias</h2>
+        <div class="gallery">
+            <!-- ... MANTENHA SUAS FOTOS ... -->
+            <div class="gallery-item">
+                <img src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Foto do casal 1">
+            </div>
+            <div class="gallery-item">
+                <img src="https://images.unsplash.com/photo-1542037104857-ffbb0b9155fb?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Foto do casal 2">
+            </div>
+            <div class="gallery-item">
+                <img src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Foto do casal 3">
+            </div>
+            <div class="gallery-item">
+                <img src="https://images.unsplash.com/photo-1519741497674-611481863552?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Foto do casal 4">
+            </div>
+        </div>
+        
+        <div class="btn-group">
+            <button class="btn btn-secondary" id="upload-btn" aria-label="Enviar fotos ou vídeos">Enviar Fotos/Vídeos</button>
+        </div>
+    </section>
 
-      <p class="small" style="margin-top:22px;">Toques de capulana e tradição. Aguardamos você para celebrar com música, dança e alegria.</p>
-    </div>
-  </div>
+    <!-- Navegação -->
+    <div class="nav-container">
+        <div class="nav-dot active" data-page="1" aria-label="Página O Convite"></div>
+        <div class="nav-dot" data-page="2" aria-label="Página Nossa História"></div>
+        <div class="nav-dot" data-page="3" aria-label="Página Presentes e Surpresas"></div>
+        <div class="nav-dot" data-page="4" aria-label="Página Álbum de Memórias"></div>
+    </div>
 
-  <script>
-    /* ====== Pétalas vermelhas e brancas ======
-       Gera pétalas com variações de tamanho, velocidade e posição
+    <script>
+        // Animação das folhas
+        function createLeaves() {
+            const container = document.getElementById('leaves-container');
+            const leafIcons = ['🍃', '🌿', '🍂'];
+            for (let i = 0; i < 20; i++) {
+                const leaf = document.createElement('div');
+                leaf.classList.add('leaf');
+                leaf.innerHTML = leafIcons[Math.floor(Math.random() * leafIcons.length)];
+                const left = Math.random() * 100;
+                const duration = 10 + Math.random() * 20;
+                const delay = Math.random() * 5;
+                const fontSize = 20 + (Math.random() * 20);
+                leaf.style.left = `${left}%`;
+                leaf.style.animationDuration = `${duration}s`;
+                leaf.style.animationDelay = `${delay}s`;
+                leaf.style.fontSize = `${fontSize}px`;
+                container.appendChild(leaf);
+            }
+        }
+        
+        function showPage(pageNumber) {
+            document.querySelectorAll('.page').forEach(page => {
+                page.classList.remove('active');
+            });
+            document.getElementById(`page${pageNumber}`).classList.add('active');
+            document.querySelectorAll('.nav-dot').forEach((dot, index) => {
+                dot.classList.toggle('active', index + 1 === pageNumber);
+            });
+        }
+        
+        document.getElementById('enter-btn').addEventListener('click', function() {
+            document.getElementById('splash').style.display = 'none';
+            showPage(1);
+        });
+        
+        document.querySelectorAll(
